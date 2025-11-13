@@ -1,0 +1,18 @@
+title: "Technical Writing Reviews"
+description: "Reviews of blogs, books, and tools for technical writers."
+baseurl: "/tech-writing-reviews"   # if repo is NOT username.github.io
+url: "https://Poema-Valente.github.io"
+
+theme: minima
+
+markdown: kramdown
+permalink: /:categories/:title/
+
+defaults:
+  - scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: "review"
+      category: "reviews"
+      author: "Poema Valente"
