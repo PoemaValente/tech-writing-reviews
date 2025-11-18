@@ -5,8 +5,6 @@ date: 2025-11-17
 categories: reviews
 ---
 
-![API Documentation Best Practices]({{ site.baseurl }}/assets/images/api-docs-best-practices.png)
-
 **APIs run quietly beneath most of the technology we use.** They move data, connect products, and enable the features we now take for granted. Despite this central role, API documentation often sits at the end of the development process, rushed or overlooked entirely. Anyone who has tried to integrate with a poorly documented API knows the cost of that oversight.
 
 As companies shift toward API-first approaches and release features at breakneck speed, documentation has become a strategic part of the product, not an accessory. It shapes how developers understand a system, how quickly they can build with it, and how smoothly they can troubleshoot when something goes wrong.
