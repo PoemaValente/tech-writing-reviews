@@ -34,7 +34,7 @@ A reference alone is not enough. **Developers need a path, not a map.**
 
 ## Examples carry more weight than explanations
 
-When developers say “the docs aren’t clear,” they almost always mean the examples are missing or incomplete. Examples let readers see how the API actually behaves — not how it should behave in theory.
+When developers say “the docs aren’t clear,” they almost always mean the examples are missing or incomplete. Examples let readers see how the API actually behaves, not how it should behave in theory.
 
 Useful examples are copy-and-paste ready, complete, annotated, realistic, and consistent across languages.
 
@@ -48,7 +48,7 @@ Error handling is where developer frustration tends to spike. Yet many API docs 
 
 Useful error documentation goes further. It shows full error bodies, explains why each error is triggered, and offers troubleshooting steps that reflect real scenarios.
 
-Clear error documentation is also an act of respect — you’re signaling that you expect people to build real systems with your API, not just toy examples.
+Clear error documentation is also an act of respect. When you clearly document errors you’re signaling that you expect people to build real systems with your API, not just toy examples.
 
 ---
 
@@ -66,7 +66,7 @@ OpenAPI schemas are essential, but they’re not documentation. They describe ty
 
 Documentation adds the context and nuance that a schema alone can’t hold.  
 
-When the schema and documentation disagree, developers lose trust — and trust is the backbone of a healthy developer experience.
+When schema and documentation disagree, developers lose trust, and trust is the backbone of a healthy developer experience.
 
 ---
 
@@ -87,7 +87,7 @@ These short guides help developers understand possibilities, not just mechanics.
 
 APIs evolve. Documentation must evolve with them.
 
-That includes changelogs, deprecation timelines, migration guides, and honest explanations of what will break — and when. Developers depend on accurate communication long after the first integration works.
+That includes changelogs, deprecation timelines, migration guides, and honest explanations of what will break and when. Developers depend on accurate communication long after the first integration works.
 
 ---
 
@@ -103,4 +103,4 @@ AI accelerates the work. It doesn’t replace the judgment behind it.
 
 API documentation reflects the health of an organization’s engineering culture. Done well, it becomes a quiet competitive advantage. Done poorly, it becomes the first reason developers walk away.
 
-For technical writers, API documentation continues to be one of the most challenging and rewarding areas of the craft — a place where clarity isn’t optional and thoughtful writing makes a measurable difference.
+For technical writers, API documentation continues to be one of the most challenging and rewarding areas of the craft. In API documentation, clarity isn’t optional and thoughtful writing makes a measurable difference.
