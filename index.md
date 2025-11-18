@@ -23,7 +23,14 @@ In each review, I look closely at four dimensions of strong technical communicat
 
 ---
 
-## Latest Reviews
+---
 
-Below are my most recent reviews.  
-You can explore the full archive on the **Reviews** page.
+## Latest posts
+
+Here are the most recent pieces on Syntax and Soul.  
+You can also find them in the sidebar under **Recent posts**, or browse everything on the [Reviews]({{ site.baseurl }}/reviews.html) page.
+
+{% for post in site.posts limit:3 %}
+- [{{ post.title }}]({{ post.url | relative_url }})  
+  <span class="date">{{ post.date | date: "%B %e, %Y" }}</span>
+{% endfor %}
