@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
-  <title>{{ page.title }} | {{ site.title }}</title>
+  <title>{{ page.title }} | Syntax &amp; Soul</title>
   <meta name="description" content="{{ page.excerpt | strip_html | truncate: 160 }}">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -22,8 +22,6 @@
       --color-accent-hover: #303f9f;
       --max-width: 1080px;
     }
-
-    /* BASE */
 
     * {
       box-sizing: border-box;
@@ -54,7 +52,13 @@
       margin-top: 0;
     }
 
-    /* HEADER (top bar like Cherryleaf) */
+    .date,
+    .muted {
+      color: var(--color-muted);
+      font-size: 0.9rem;
+    }
+
+    /* HEADER (top bar similar to Cherryleaf) */
 
     .site-header {
       border-bottom: 1px solid var(--color-border);
@@ -132,7 +136,7 @@
       width: 100%;
     }
 
-    /* LAYOUT: MAIN + SIDEBAR */
+    /* LAYOUT: main + sidebar */
 
     .page {
       max-width: var(--max-width);
@@ -157,7 +161,18 @@
       font-size: 0.9rem;
     }
 
-    /* CONTENT ELEMENTS */
+    /* HERO IMAGE IN MAIN COLUMN */
+
+    .hero-banner {
+      width: 100%;
+      max-height: 220px;
+      object-fit: cover;
+      border-radius: 12px;
+      margin: 0 0 1.75rem 0;
+      box-shadow: 0 14px 30px rgba(15, 23, 42, 0.08);
+    }
+
+    /* Meta box, etc. */
 
     .meta-box {
       border: 1px solid var(--color-border);
@@ -168,13 +183,7 @@
       border-radius: 8px;
     }
 
-    .date,
-    .muted {
-      color: var(--color-muted);
-      font-size: 0.9rem;
-    }
-
-    /* SIDEBAR WIDGETS (similar to Cherryleaf Podcast / Recent Posts / Categories) */
+    /* Sidebar widgets */
 
     .widget {
       margin-bottom: 2rem;
@@ -221,7 +230,7 @@
       color: var(--color-accent);
     }
 
-    /* FOOTER */
+    /* Footer */
 
     footer {
       border-top: 1px solid var(--color-border);
@@ -240,7 +249,7 @@
       text-decoration: underline;
     }
 
-    /* RESPONSIVE */
+    /* Responsive */
 
     @media (max-width: 860px) {
       .layout {
@@ -273,11 +282,11 @@
       <div class="site-branding">
         <h1 class="site-title">
           <a href="{{ site.baseurl }}/">
-            {{ site.title }}
+            Syntax &amp; Soul
           </a>
         </h1>
         <p class="site-tagline">
-          {{ site.description }}
+          Technical writing, APIs, and the craft of clear communication.
         </p>
       </div>
 
@@ -294,6 +303,12 @@
     <div class="layout">
       <!-- MAIN CONTENT COLUMN -->
       <main>
+        <!-- NEW HERO IMAGE -->
+        <img
+          src="{{ site.baseurl }}/assets/images/hero-syntax-soul.png"
+          alt="Abstract illustration representing clear technical communication"
+          class="hero-banner">
+
         {{ content }}
       </main>
 
@@ -302,7 +317,7 @@
         <section class="widget">
           <h2 class="widget-title">About this blog</h2>
           <p>
-            Thoughts on technical writing, API documentation, and the craft of clear communication.
+            Essays and notes on technical writing, API documentation, and how words shape user experience.
           </p>
         </section>
 
@@ -313,7 +328,7 @@
               <li>
                 <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
               </li>
-            {% endfor %
+            {% endfor %}
           </ul>
         </section>
 
@@ -333,7 +348,7 @@
 
     <!-- FOOTER -->
     <footer>
-      <p>&copy; {{ "now" | date: "%Y" }} {{ site.title }}.</p>
+      <p>&copy; {{ "now" | date: "%Y" }} Syntax &amp; Soul.</p>
     </footer>
   </div>
 </body>
