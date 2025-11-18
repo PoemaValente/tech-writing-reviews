@@ -1,0 +1,5 @@
+/* Hide the Minima theme's automatic header title & description */
+.site-title,
+.site-description {
+  display: none !important;
+}
