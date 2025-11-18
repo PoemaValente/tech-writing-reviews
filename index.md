@@ -23,8 +23,6 @@ In each review, I look closely at four dimensions of strong technical communicat
 
 ---
 
----
-
 ## Latest posts
 
 Here are the most recent pieces on Syntax and Soul.  
