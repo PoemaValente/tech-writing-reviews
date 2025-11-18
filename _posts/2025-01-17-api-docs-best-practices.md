@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "The New Fundamentals of API Documentation in 2025"
-date: 2025-01-17
+date: 2025-11-17
 categories: reviews
 ---
 
