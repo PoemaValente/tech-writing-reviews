@@ -6,8 +6,7 @@ title: Home
 
 _A space for thinking about technical writing as both craft and practice. It's where syntax meets soul, and documentation meets real people doing real work._
 
-Here I review the blogs, books, tools, and ideas that are shaping today’s technical writing landscape.  
-Each piece looks not only at **what** a resource says, but **how** it influences the everyday realities of technical communicators: the choices we make about structure, language, ethics, and audience.
+Here I review the blogs, books, tools, and ideas that are shaping today’s technical writing landscape. Each piece looks not only at **what** a resource says, but **how** it influences the everyday realities of technical communicators: the choices we make about structure, language, ethics, and audience.
 
 ---
 
