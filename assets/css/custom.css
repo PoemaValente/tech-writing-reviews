@@ -3,3 +3,7 @@
 .site-description {
   display: none !important;
 }
+/* Also hide any header paragraph used as a tagline */
+.site-header p {
+  display: none !important;
+}
