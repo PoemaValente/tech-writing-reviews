@@ -60,7 +60,7 @@ Predictability isn’t boring. **Predictability is kindness.**
 
 ---
 
-## The schema is a contract — but the documentation gives it life
+## The schema is a contract, but the documentation gives it life
 
 OpenAPI schemas are essential, but they’re not documentation. They describe types and constraints but don’t explain when something matters, how fields relate, or what a breaking change looks like in practice.
 
