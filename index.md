@@ -3,7 +3,6 @@ layout: default
 title: Home
 ---
 
-# Syntax and Soul
 
 _A space for thinking about technical writing as both craft and practice. It's where syntax meets soul, and documentation meets real people doing real work._
 
