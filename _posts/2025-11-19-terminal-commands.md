@@ -5,7 +5,7 @@ date: 2025-11-19
 categories: reviews
 ---
 
-**For many technical writers, the Terminal is less a developer’s playground and more a quiet backstage where documentation gets built, tested, organized, and delivered. Knowing a handful of essential commands can improve your workflow, help you navigate large repos with confidence, and make it easier to collaborate with engineers. Below is a curated list of the most commonly used Terminal commands that support writing, editing, building, and maintaining modern documentation.
+For many technical writers, the Terminal is less a developer’s playground and more a quiet backstage where documentation gets built, tested, organized, and delivered. Knowing a handful of essential commands can improve your workflow, help you navigate large repos with confidence, and make it easier to collaborate with engineers. Below is a curated list of the most commonly used Terminal commands that support writing, editing, building, and maintaining modern documentation.
 
 ---
 
@@ -165,7 +165,3 @@ Converts documents (e.g., Markdown to PDF).
 
 **`open .`** (macOS)  
 Opens the current folder in Finder.
-
----
-
-By learning even a small set of these commands, technical writers gain more control over their tools, speed up repetitive tasks, and feel more at ease in developer-centric environments.
