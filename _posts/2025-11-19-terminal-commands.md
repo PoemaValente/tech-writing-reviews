@@ -1,6 +1,11 @@
-## Essential Terminal Commands for Technical Writers
+---
+layout: post
+title: "Essential Terminal Commands for Technical Writers"
+date: 2025-11-19
+categories: reviews
+---
 
-For many technical writers, the Terminal is less a developer’s playground and more a quiet backstage where documentation gets built, tested, organized, and delivered. Knowing a handful of essential commands can improve your workflow, help you navigate large repos with confidence, and make it easier to collaborate with engineers. Below is a curated list of the most commonly used Terminal commands that support writing, editing, building, and maintaining modern documentation.
+**For many technical writers, the Terminal is less a developer’s playground and more a quiet backstage where documentation gets built, tested, organized, and delivered. Knowing a handful of essential commands can improve your workflow, help you navigate large repos with confidence, and make it easier to collaborate with engineers. Below is a curated list of the most commonly used Terminal commands that support writing, editing, building, and maintaining modern documentation.
 
 ---
 
