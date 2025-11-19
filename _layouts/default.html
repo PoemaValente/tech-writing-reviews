@@ -345,38 +345,6 @@
         {{ content }}
       </main>
 
-    {% if page.layout == "post" %}
-  <section class="reaction-block">
-    <button class="reaction-button" id="reaction-button">
-      <span>👏</span>
-      <span>React</span>
-      <span class="reaction-count" id="reaction-count">0</span>
-    </button>
-    <div>Enjoyed this piece? Tap to react.</div>
-
-    <script>
-      (function () {
-        // Unique key per page based on its path
-        var key = "reaction-count-" + window.location.pathname;
-        var button = document.getElementById("reaction-button");
-        var countEl = document.getElementById("reaction-count");
-
-        var stored = localStorage.getItem(key);
-        var count = stored ? parseInt(stored, 10) : 0;
-        if (!isNaN(count)) {
-          countEl.textContent = count;
-        }
-
-        button.addEventListener("click", function () {
-          count += 1;
-          localStorage.setItem(key, count);
-          countEl.textContent = count;
-        });
-      })();
-    </script>
-  </section>
-  {% endif %}
-
       <!-- SIDEBAR (similar to Cherryleaf’s right column) -->
       <aside class="sidebar">
         <section class="widget">
