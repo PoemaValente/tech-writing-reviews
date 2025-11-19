@@ -182,7 +182,42 @@
       background: #fafafa;
       border-radius: 8px;
     }
+    .reaction-block {
+      margin-top: 2.5rem;
+      text-align: center;
+      font-size: 0.9rem;
+      color: #6b7280;
+    }
 
+    .reaction-button {
+      border: 1px solid #e5e7eb;
+      background: #fdf6e3;
+      border-radius: 999px;
+      padding: 0.4rem 0.9rem;
+      cursor: pointer;
+      font-size: 0.95rem;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.35rem;
+      box-shadow: 0 4px 10px rgba(15, 23, 42, 0.08);
+      transition: transform 0.05s ease-out, box-shadow 0.1s ease-out;
+    }
+
+    .reaction-button:hover {
+      transform: translateY(-1px);
+      box-shadow: 0 6px 16px rgba(15, 23, 42, 0.12);
+    }
+
+    .reaction-button:active {
+      transform: translateY(0);
+      box-shadow: 0 2px 6px rgba(15, 23, 42, 0.08);
+    }
+
+    .reaction-count {
+      font-weight: 600;
+      color: #43302e;
+    }
+    
     /* Sidebar widgets */
 
     .widget {
