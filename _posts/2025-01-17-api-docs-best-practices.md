@@ -72,10 +72,10 @@ When schema and documentation disagree, developers lose trust, and trust is the 
 
 Listing endpoints is a starting point, not the final product. Developers often need to see complete workflows:
 
-- verifying webhooks
-- building a recurring billing flow
-- syncing data between systems
-- migrating versions
+- Verifying webhooks
+- Building a recurring billing flow
+- Syncing data between systems
+- Migrating versions
 
 These short guides help developers understand possibilities, not just mechanics.
 
