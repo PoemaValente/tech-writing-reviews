@@ -374,16 +374,33 @@
     </footer>
   </div>
   <script>
+  (function () {
     const clapButton = document.getElementById('clap-button');
-    if (clapButton) {
     const clapCount = document.getElementById('clap-count');
-    let count = 0;
 
+    // Only run on pages that actually have the button
+    if (!clapButton || !clapCount) return;
+
+    // Use the page path as a key, so each post has its own count
+    const storageKey = 'claps:' + window.location.pathname;
+
+    // Load existing count from localStorage (if any)
+    let count = 0;
+    const saved = localStorage.getItem(storageKey);
+    if (saved !== null && !isNaN(parseInt(saved, 10))) {
+      count = parseInt(saved, 10);
+    }
+
+    // Show initial count
+    clapCount.textContent = count;
+
+    // Increment and save on click
     clapButton.addEventListener('click', () => {
       count++;
       clapCount.textContent = count;
+      localStorage.setItem(storageKey, count);
     });
-  }
+  })();
 </script>
 </body>
 </html>
