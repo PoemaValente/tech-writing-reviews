@@ -182,13 +182,14 @@
       background: #fafafa;
       border-radius: 8px;
     }
-    .reaction-block {
-      margin-top: 2.5rem;
+    
+   .reaction-block {
+      margin: 1.5rem 0 1.75rem;
       text-align: center;
       font-size: 0.9rem;
       color: #6b7280;
     }
-
+    
     .reaction-button {
       border: 1px solid #e5e7eb;
       background: #fdf6e3;
@@ -313,7 +314,7 @@
   <link rel="stylesheet" href="{{ "/assets/css/custom.css" | relative_url }}">
 </head>
 <body>
-  <!-- TOP HEADER -->
+   <!-- TOP HEADER -->
   <header class="site-header">
     <div class="site-header-inner">
       <div class="site-branding">
@@ -321,6 +322,7 @@
           <a href="{{ site.baseurl }}/">
             Syntax &amp; Soul
           </a>
+        </h1>
       </div>
 
       <nav class="site-nav">
@@ -331,8 +333,15 @@
     </div>
   </header>
 
-  <!-- MAIN PAGE WRAP -->
+  <!-- 👏 REACTION BLOCK UNDER HEADER -->
   <div class="page">
+    <div class="reaction-block">
+      <button class="reaction-button" id="clap-button">
+        <span aria-hidden="true">👏</span>
+        <span class="reaction-count" id="clap-count">0</span>
+      </button>
+    </div>
+
     <div class="layout">
       <!-- MAIN CONTENT COLUMN -->
       <main>
@@ -385,4 +394,16 @@
     </footer>
   </div>
 </body>
+  
+  <script>
+    const clapButton = document.getElementById('clap-button');
+    const clapCount = document.getElementById('clap-count');
+
+    let count = 0;
+
+    clapButton.addEventListener('click', () => {
+      count++;
+      clapCount.textContent = count;
+    });
+  </script>
 </html>
