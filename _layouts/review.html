@@ -4,41 +4,10 @@ layout: default
 
 <article class="review">
 
-  <!-- Post Title -->
+  <!-- Page title (e.g. "Reviews") -->
   <h1>{{ page.title }}</h1>
 
-  <!-- Date + Clap Button -->
-  <p class="date" style="margin-top: 0.3rem; margin-bottom: 1rem;">
-    {{ page.date | date: "%B %-d, %Y" }}
-
-    <button id="clap-button" class="clap-inline">
-      👏 <span id="clap-count">0</span>
-    </button>
-  </p>
-
-  <!-- Meta Box -->
-  <div class="meta-box">
-    {% if page.resource_name %}
-      <p><strong>Resource:</strong> {{ page.resource_name }}</p>
-    {% endif %}
-    {% if page.resource_url %}
-      <p><strong>Link:</strong> <a href="{{ page.resource_url }}">{{ page.resource_url }}</a></p>
-    {% endif %}
-    {% if page.topic %}
-      <p><strong>Topic:</strong> {{ page.topic }}</p>
-    {% endif %}
-    {% if page.audience %}
-      <p><strong>Audience:</strong> {{ page.audience }}</p>
-    {% endif %}
-    {% if page.format %}
-      <p><strong>Format:</strong> {{ page.format }}</p>
-    {% endif %}
-    {% if page.rating %}
-      <p><strong>Rating:</strong> {{ page.rating }} / 5</p>
-    {% endif %}
-  </div>
-
-  <!-- Post Content -->
+  <!-- Whatever content you put in reviews.md -->
   {{ content }}
 
 </article>
