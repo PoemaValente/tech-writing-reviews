@@ -26,7 +26,7 @@ Most developers don’t begin with the structure of your backend or the shape of
 
 Good API documentation follows that workflow. It guides readers through the tasks they’re trying to complete, not the way your engineering team organizes its services.
 
-A reference alone is not enough. **Developers need a path, not a map.**
+A reference alone is not enough. Developers need a path, not a map.
 
 ---
 
@@ -54,7 +54,7 @@ Clear error documentation is also an act of respect. When you clearly document e
 
 Good API writing doesn’t need to be lyrical. It needs to be steady and predictable. Developers should recognize patterns: the same verbs, the same structure, the same tone.
 
-Predictability isn’t boring. **Predictability is kindness.**
+Predictability isn’t boring. Predictability is kindness.
 
 ---
 
