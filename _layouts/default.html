@@ -52,10 +52,27 @@
       margin-top: 0;
     }
 
-    .date,
-    .muted {
-      color: var(--color-muted);
-      font-size: 0.9rem;
+    .date {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      flex-wrap: wrap;
+    }
+
+    .clap-inline {
+      background: #fdf6e3;
+      border: 1px solid #e5e7eb;
+      border-radius: 999px;
+      padding: 0.1rem 0.6rem;
+      font-size: 0.75rem;
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.25rem;
+    }
+
+    .clap-inline:hover {
+      background: #faecd2;
     }
 
     /* HEADER (top bar similar to Cherryleaf) */
@@ -183,26 +200,6 @@
       border-radius: 8px;
     }
     
-   .reaction-block {
-      margin: 1.5rem 0 1.75rem;
-      text-align: center;
-      font-size: 0.9rem;
-      color: #6b7280;
-    }
-    
-    .reaction-button {
-      border: 1px solid #e5e7eb;
-      background: #fdf6e3;
-      border-radius: 999px;
-      padding: 0.4rem 0.9rem;
-      cursor: pointer;
-      font-size: 0.95rem;
-      display: inline-flex;
-      align-items: center;
-      gap: 0.35rem;
-      box-shadow: 0 4px 10px rgba(15, 23, 42, 0.08);
-      transition: transform 0.05s ease-out, box-shadow 0.1s ease-out;
-    }
 
     .reaction-button:hover {
       transform: translateY(-1px);
@@ -212,11 +209,6 @@
     .reaction-button:active {
       transform: translateY(0);
       box-shadow: 0 2px 6px rgba(15, 23, 42, 0.08);
-    }
-
-    .reaction-count {
-      font-weight: 600;
-      color: #43302e;
     }
     
     /* Sidebar widgets */
@@ -333,15 +325,7 @@
     </div>
   </header>
 
-  <!-- 👏 REACTION BLOCK UNDER HEADER -->
   <div class="page">
-    <div class="reaction-block">
-      <button class="reaction-button" id="clap-button">
-        <span aria-hidden="true">👏</span>
-        <span class="reaction-count" id="clap-count">0</span>
-      </button>
-    </div>
-
     <div class="layout">
       <!-- MAIN CONTENT COLUMN -->
       <main>
