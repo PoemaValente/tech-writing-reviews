@@ -379,15 +379,16 @@
     </footer>
   </div>
   <script>
-    const clapButton = document.getElementById('clap-button');
+  const clapButton = document.getElementById('clap-button');
+  if (clapButton) {
     const clapCount = document.getElementById('clap-count');
-
     let count = 0;
 
     clapButton.addEventListener('click', () => {
       count++;
-      clapCount.textContent = count;  
+      clapCount.textContent = count;
     });
+  }
 </script>
 </body>
 </html>
