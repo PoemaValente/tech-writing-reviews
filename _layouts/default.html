@@ -404,5 +404,30 @@
 
 });
 </script>
+  <!-- Chatbot widget -->
+<div id="tw-chatbot">
+  <button id="tw-chat-toggle" aria-label="Open chat">
+    💬
+  </button>
+
+  <div id="tw-chat-window" aria-live="polite">
+    <div id="tw-chat-header">
+      <span>Docs Guide Bot</span>
+      <button id="tw-chat-close" aria-label="Close chat">×</button>
+    </div>
+    <div id="tw-chat-body"></div>
+    <form id="tw-chat-form">
+      <input
+        type="text"
+        id="tw-chat-input"
+        placeholder="Type 'help' or use the buttons…"
+        autocomplete="off"
+      />
+      <button type="submit">Send</button>
+    </form>
+  </div>
+</div>
+
+<script src="/assets/js/chatbot.js"></script>
 </body>
 </html>
