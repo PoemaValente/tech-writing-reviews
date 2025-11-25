@@ -303,159 +303,111 @@
       }
     }
  
-    /* --- CHATBOT STYLES START HERE --- */
+    /* --- SIDEBAR CHATBOT STYLES START HERE --- */
 
-#tw-chatbot {
-  position: fixed;
-  bottom: 24px;
-  right: 24px;
-  z-index: 9999;
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Nunito Sans", sans-serif;
-}
+    /* Chatbot panel inside a sidebar widget */
+    #tw-chatbot {
+      display: flex;
+      flex-direction: column;
+      border-radius: 8px;
+      background: #ffffff;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Nunito Sans", sans-serif;
+      font-size: 14px;
+      max-height: 360px; /* adjust if you want it taller/shorter */
+      overflow: hidden;
+    }
 
-#tw-chat-toggle {
-  width: 56px;
-  height: 56px;
-  border-radius: 50%;
-  border: none;
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
-  cursor: pointer;
-  font-size: 24px;
-  background: #3f51b5;
-  color: #ffffff;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
+    #tw-chat-header {
+      background: #3f51b5;
+      color: #ffffff;
+      padding: 8px 10px;
+      font-size: 13px;
+      font-weight: 600;
+    }
 
-#tw-chat-window {
-  display: none;
-  width: 320px;
-  max-height: 460px;
-  background: #ffffff;
-  border-radius: 12px;
-  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.18);
-  overflow: hidden;
-  flex-direction: column;
-}
+    #tw-chat-body {
+      padding: 8px;
+      background: #f5f7fb;
+      overflow-y: auto;
+      flex: 1 1 auto;
+      font-size: 13px;
+    }
 
-#tw-chat-header {
-  background: #3f51b5;
-  color: #ffffff;
-  padding: 10px 12px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  font-size: 14px;
-}
+    .tw-msg {
+      margin-bottom: 6px;
+      display: flex;
+    }
 
-#tw-chat-header button {
-  background: transparent;
-  border: none;
-  color: inherit;
-  font-size: 18px;
-  cursor: pointer;
-}
+    .tw-msg-bot {
+      justify-content: flex-start;
+    }
 
-#tw-chat-body {
-  padding: 10px;
-  height: 320px;
-  overflow-y: auto;
-  background: #f5f7fb;
-  font-size: 14px;
-}
+    .tw-msg-user {
+      justify-content: flex-end;
+    }
 
-.tw-msg {
-  margin-bottom: 8px;
-  display: flex;
-}
+    .tw-msg-bubble {
+      padding: 6px 8px;
+      border-radius: 10px;
+      max-width: 100%;
+      line-height: 1.4;
+      font-size: 13px;
+    }
 
-.tw-msg-bot {
-  justify-content: flex-start;
-}
+    .tw-msg-bot .tw-msg-bubble {
+      background: #ffffff;
+      border: 1px solid #e0e4ee;
+    }
 
-.tw-msg-user {
-  justify-content: flex-end;
-}
+    .tw-msg-user .tw-msg-bubble {
+      background: #3f51b5;
+      color: #ffffff;
+    }
 
-.tw-msg-bubble {
-  padding: 8px 10px;
-  border-radius: 12px;
-  max-width: 80%;
-  line-height: 1.4;
-}
+    .tw-quick-replies {
+      margin: 4px 0 6px;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 4px;
+    }
 
-.tw-msg-bot .tw-msg-bubble {
-  background: #ffffff;
-  border: 1px solid #e0e4ee;
-}
+    .tw-quick-replies button {
+      border: 1px solid #3f51b5;
+      background: #ffffff;
+      color: #3f51b5;
+      border-radius: 999px;
+      padding: 2px 8px;
+      font-size: 11px;
+      cursor: pointer;
+    }
 
-.tw-msg-user .tw-msg-bubble {
-  background: #3f51b5;
-  color: #ffffff;
-}
+    #tw-chat-form {
+      display: flex;
+      border-top: 1px solid #e0e4ee;
+      flex-shrink: 0;
+    }
 
-.tw-quick-replies {
-  margin: 4px 0 6px;
-  display: flex;
-  flex-wrap: wrap;
-  gap: 4px;
-}
+    #tw-chat-input {
+      flex: 1;
+      border: none;
+      padding: 6px 8px;
+      font-size: 13px;
+    }
 
-.tw-quick-replies button {
-  border: 1px solid #3f51b5;
-  background: #ffffff;
-  color: #3f51b5;
-  border-radius: 999px;
-  padding: 3px 10px;
-  font-size: 12px;
-  cursor: pointer;
-}
+    #tw-chat-input:focus {
+      outline: none;
+    }
 
-#tw-chat-form {
-  display: flex;
-  border-top: 1px solid #e0e4ee;
-}
+    #tw-chat-form button[type="submit"] {
+      border: none;
+      padding: 0 10px;
+      font-size: 13px;
+      background: #3f51b5;
+      color: #ffffff;
+      cursor: pointer;
+    }
 
-#tw-chat-input {
-  flex: 1;
-  border: none;
-  padding: 8px;
-  font-size: 14px;
-}
-
-#tw-chat-input:focus {
-  outline: none;
-}
-
-#tw-chat-form button[type="submit"] {
-  border: none;
-  padding: 0 12px;
-  font-size: 14px;
-  background: #3f51b5;
-  color: #ffffff;
-  cursor: pointer;
-}
-
-#tw-chatbot.tw-open #tw-chat-window {
-  display: flex;
-  flex-direction: column;
-}
-
-#tw-chatbot.tw-open #tw-chat-toggle {
-  display: none;
-}
-
-@media (max-width: 600px) {
-  #tw-chat-window {
-    width: 90vw;
-    max-height: 70vh;
-    right: 5vw;
-    bottom: 80px;
-  }
-}
-
-/* --- CHATBOT STYLES END --- */
+    /* --- SIDEBAR CHATBOT STYLES END --- */
   </style>
   
   <link rel="stylesheet" href="{{ "/assets/css/custom.css" | relative_url }}">
@@ -519,6 +471,28 @@
             <a href="{{ site.baseurl }}/reviews.html">reviews</a>
           </div>
         </section>
+
+        <!-- CHATBOT WIDGET IN SIDEBAR -->
+        <section class="widget">
+          <h2 class="widget-title">Chat with my docs bot</h2>
+          <div id="tw-chatbot">
+            <div id="tw-chat-header">
+              Docs Guide Bot
+            </div>
+
+            <div id="tw-chat-body"></div>
+
+            <form id="tw-chat-form">
+              <input
+                id="tw-chat-input"
+                type="text"
+                placeholder="Type 'help' or use the buttons…"
+                autocomplete="off"
+              />
+              <button type="submit">Send</button>
+            </form>
+          </div>
+        </section>
       </aside>
     </div>
 
@@ -527,260 +501,274 @@
       <p>&copy; {{ "now" | date: "%Y" }} Syntax &amp; Soul.</p>
     </footer>
   </div>
+
+  <!-- Clap script (unchanged) -->
   <script>
     document.addEventListener("DOMContentLoaded", function () {
+      const clapButton = document.getElementById('clap-button');
+      const clapCount = document.getElementById('clap-count');
 
-    const clapButton = document.getElementById('clap-button');
-    const clapCount = document.getElementById('clap-count');
+      // Only run on pages that have the button
+      if (!clapButton || !clapCount) return;
 
-    // Only run on pages that have the button
-    if (!clapButton || !clapCount) return;
+      // Use path as a unique key for each post
+      const storageKey = 'claps:' + window.location.pathname;
 
-    // Use path as a unique key for each post
-    const storageKey = 'claps:' + window.location.pathname;
+      // Load existing count
+      let count = 0;
+      const saved = localStorage.getItem(storageKey);
+      if (saved !== null && !isNaN(parseInt(saved, 10))) {
+        count = parseInt(saved, 10);
+      }
 
-    // Load existing count
-    let count = 0;
-    const saved = localStorage.getItem(storageKey);
-    if (saved !== null && !isNaN(parseInt(saved, 10))) {
-      count = parseInt(saved, 10);
-    }
-
-    // Show initial count
-    clapCount.textContent = count;
-
-    // Increment and save
-    clapButton.addEventListener('click', () => {
-      count++;
+      // Show initial count
       clapCount.textContent = count;
-      localStorage.setItem(storageKey, count);
-    });
 
-});
-</script>
-  <!-- Chatbot widget -->
-<div id="tw-chatbot">
-  <button id="tw-chat-toggle" aria-label="Open chat">
-    💬
-  </button>
-
-  <div id="tw-chat-window" aria-live="polite">
-    <div id="tw-chat-header">
-      <span>Docs Guide Bot</span>
-      <button id="tw-chat-close" aria-label="Close chat">×</button>
-    </div>
-    <div id="tw-chat-body"></div>
-    <form id="tw-chat-form">
-      <input
-        type="text"
-        id="tw-chat-input"
-        placeholder="Type 'help' or use the buttons…"
-        autocomplete="off"
-      />
-      <button type="submit">Send</button>
-    </form>
-  </div>
-</div>
-
-<script src="/assets/js/chatbot.js"></script>
-  <!-- Chatbot widget -->
-<div id="tw-chatbot">
-  <button id="tw-chat-toggle" aria-label="Open chat">💬</button>
-
-  <div id="tw-chat-window" aria-live="polite">
-    <div id="tw-chat-header">
-      <span>Docs Guide Bot</span>
-      <button id="tw-chat-close" aria-label="Close chat">×</button>
-    </div>
-    <div id="tw-chat-body"></div>
-
-    <form id="tw-chat-form">
-      <input id="tw-chat-input" type="text" placeholder="Type 'help'…" autocomplete="off" />
-      <button type="submit">Send</button>
-    </form>
-  </div>
-</div>
-
-<script>
-(function () {
-  const chatbot = document.getElementById("tw-chatbot");
-  const toggle = document.getElementById("tw-chat-toggle");
-  const closeBtn = document.getElementById("tw-chat-close");
-  const chatBody = document.getElementById("tw-chat-body");
-  const form = document.getElementById("tw-chat-form");
-  const input = document.getElementById("tw-chat-input");
-
-  let currentPersona = null;
-
-  function scrollToBottom() {
-    chatBody.scrollTop = chatBody.scrollHeight;
-  }
-
-  function addMessage(text, from = "bot") {
-    const wrapper = document.createElement("div");
-    wrapper.className = `tw-msg tw-msg-${from}`;
-    const bubble = document.createElement("div");
-    bubble.className = "tw-msg-bubble";
-    bubble.innerHTML = text;
-    wrapper.appendChild(bubble);
-    chatBody.appendChild(wrapper);
-    scrollToBottom();
-  }
-
-  function addQuickReplies(options) {
-    const container = document.createElement("div");
-    container.className = "tw-quick-replies";
-    options.forEach(opt => {
-      const btn = document.createElement("button");
-      btn.type = "button";
-      btn.textContent = opt.label;
-      btn.addEventListener("click", () => {
-        container.remove();
-        handleQuickReply(opt.value);
+      // Increment and save
+      clapButton.addEventListener('click', () => {
+        count++;
+        clapCount.textContent = count;
+        localStorage.setItem(storageKey, count);
       });
-      container.appendChild(btn);
     });
-    chatBody.appendChild(container);
-    scrollToBottom();
-  }
+  </script>
 
-  function initialGreeting() {
-    chatBody.innerHTML = "";
-    addMessage("<strong>Hi, I’m your Docs Guide bot.</strong><br>I can give you a quick tour of my work as a Senior Technical Writer.");
+  <!-- Sidebar chatbot script -->
+  <script>
+    (function () {
+      const chatBody = document.getElementById("tw-chat-body");
+      const form = document.getElementById("tw-chat-form");
+      const input = document.getElementById("tw-chat-input");
 
-    addMessage("First, how would you describe yourself?");
-    addQuickReplies([
-      { label: "Hiring manager / recruiter", value: "persona_hiring" },
-      { label: "Writer / doc person", value: "persona_writer" },
-      { label: "Just curious", value: "persona_curious" },
-    ]);
-  }
+      // In case a page doesn’t have the widget for some reason
+      if (!chatBody || !form || !input) {
+        return;
+      }
 
-  function showHiringManagerMenu() {
-    currentPersona = "hiring_manager";
-    addMessage("Great! Here are some quick options:");
-    addQuickReplies([
-      { label: "Experience highlights", value: "hm_highlights" },
-      { label: "API docs work", value: "hm_api" },
-      { label: "Sample doc thinking", value: "hm_sample" },
-      { label: "Contact info", value: "hm_contact" },
-      { label: "Back", value: "start_over" },
-    ]);
-  }
+      function scrollToBottom() {
+        chatBody.scrollTop = chatBody.scrollHeight;
+      }
 
-  function showWriterMenu() {
-    currentPersona = "writer";
-    addMessage("Nice! Always good to meet other docs folks.");
-    addQuickReplies([
-      { label: "Recommended posts", value: "w_posts" },
-      { label: "Docs philosophy", value: "w_philosophy" },
-      { label: "Sample rewrite", value: "w_sample" },
-      { label: "Back", value: "start_over" },
-    ]);
-  }
+      function addMessage(text, from = "bot") {
+        const wrapper = document.createElement("div");
+        wrapper.className = `tw-msg tw-msg-${from}`;
 
-  function showCuriousMenu() {
-    currentPersona = "curious";
-    addMessage("Welcome! Here are some places to start:");
-    addQuickReplies([
-      { label: "Where to start", value: "c_start" },
-      { label: "What I write about", value: "c_topics" },
-      { label: "Back", value: "start_over" },
-    ]);
-  }
+        const bubble = document.createElement("div");
+        bubble.className = "tw-msg-bubble";
+        bubble.innerHTML = text;
 
-  function handleQuickReply(value) {
-    switch (value) {
-      case "persona_hiring":
-        addMessage("Hiring manager / recruiter", "user");
-        showHiringManagerMenu();
-        break;
-      case "persona_writer":
-        addMessage("Writer / doc person", "user");
-        showWriterMenu();
-        break;
-      case "persona_curious":
-        addMessage("Just curious", "user");
-        showCuriousMenu();
-        break;
+        wrapper.appendChild(bubble);
+        chatBody.appendChild(wrapper);
+        scrollToBottom();
+      }
 
-      case "hm_highlights":
-        addMessage("Experience highlights", "user");
-        addMessage("<strong>Experience Highlights</strong><br>• Nearly four years as a Senior Technical Writer at Salesforce, focusing on API and online help documentation.<br>• Partnered closely with engineers and PMs.<br>• Built structured docs that support rapid product iteration.");
-        break;
-      case "hm_api":
-        addMessage("API docs work", "user");
-        addMessage("<strong>API Documentation Examples</strong><br>• Topic architectures (concept → quickstart → reference)<br>• Example-driven content<br>• Developer-focused flows<br><br>Read: <a href=\"/the-new-fundamentals-of-api-documentation-in-2025/\">API Documentation in 2025</a>");
-        break;
-      case "hm_sample":
-        addMessage("Sample doc thinking", "user");
-        addMessage("<strong>How I approach documenting a new API:</strong><br>1. Identify key user journeys<br>2. Create a minimal running quickstart<br>3. Structure reference with examples<br>4. Align naming + errors with engineering");
-        break;
-      case "hm_contact":
-        addMessage("Contact info", "user");
-        addMessage("You can reach me at <em>[your-email]</em> or on <a href=\"[your-linkedin]\" target=\"_blank\">LinkedIn</a>.");
-        break;
+      function addQuickReplies(options) {
+        const container = document.createElement("div");
+        container.className = "tw-quick-replies";
 
-      case "w_posts":
-        addMessage("Recommended posts", "user");
-        addMessage("<strong>Start here:</strong><br><a href=\"/the-new-fundamentals-of-api-documentation-in-2025/\">The New Fundamentals of API Documentation</a>");
-        break;
-      case "w_philosophy":
-        addMessage("Docs philosophy", "user");
-        addMessage("<strong>Docs Philosophy</strong><br>• Write for real tasks<br>• Examples first<br>• Docs are a product surface");
-        break;
-      case "w_sample":
-        addMessage("Sample rewrite", "user");
-        addMessage("<em>Before:</em> 'Our powerful API lets you integrate easily.'<br><br><em>After:</em> 'Use the API to create, update, and delete customer data. Start by creating an API key, then call <code>/customers</code> with a JSON payload.'");
-        break;
+        options.forEach((opt) => {
+          const btn = document.createElement("button");
+          btn.type = "button";
+          btn.textContent = opt.label;
+          btn.addEventListener("click", () => {
+            container.remove();
+            handleQuickReply(opt.value);
+          });
+          container.appendChild(btn);
+        });
 
-      case "c_start":
-        addMessage("Where to start", "user");
-        addMessage("A good starting point is my article: <a href=\"/the-new-fundamentals-of-api-documentation-in-2025/\">API Documentation in 2025</a>");
-        break;
-      case "c_topics":
-        addMessage("What I write about", "user");
-        addMessage("I write about technical writing, APIs, docs processes, and how people navigate complex systems.");
-        break;
+        chatBody.appendChild(container);
+        scrollToBottom();
+      }
 
-      case "start_over":
-        initialGreeting();
-        break;
+      function initialGreeting() {
+        chatBody.innerHTML = "";
+        addMessage(
+          "<strong>Hi, I’m your Docs Guide bot.</strong><br>" +
+          "I can give you a quick tour of my work as a Senior Technical Writer."
+        );
 
-      default:
-        addMessage("Try using one of the options above!");
-    }
-  }
+        addMessage("How would you describe yourself?");
+        addQuickReplies([
+          { label: "Hiring manager / recruiter", value: "persona_hiring" },
+          { label: "Writer / doc person", value: "persona_writer" },
+          { label: "Just curious", value: "persona_curious" },
+        ]);
+      }
 
-  function handleUserInput(text) {
-    const lower = text.trim().toLowerCase();
-    if (!lower) return;
+      function showHiringManagerMenu() {
+        addMessage("Welcome! Here are some quick options:");
+        addQuickReplies([
+          { label: "Experience highlights", value: "hm_highlights" },
+          { label: "API docs work", value: "hm_api" },
+          { label: "Sample doc thinking", value: "hm_sample" },
+          { label: "Contact info", value: "hm_contact" },
+          { label: "Start over", value: "start_over" },
+        ]);
+      }
 
-    addMessage(text, "user");
+      function showWriterMenu() {
+        addMessage("Nice to meet another docs person 😊");
+        addQuickReplies([
+          { label: "Recommended posts", value: "w_posts" },
+          { label: "Docs philosophy", value: "w_philosophy" },
+          { label: "Sample rewrite", value: "w_sample" },
+          { label: "Start over", value: "start_over" },
+        ]);
+      }
 
-    if (lower.includes("experience")) return handleQuickReply("hm_highlights");
-    if (lower.includes("api")) return handleQuickReply("hm_api");
-    if (lower.includes("contact")) return handleQuickReply("hm_contact");
+      function showCuriousMenu() {
+        addMessage("Welcome! Here are some places to start:");
+        addQuickReplies([
+          { label: "Where to start", value: "c_start" },
+          { label: "What I write about", value: "c_topics" },
+          { label: "Start over", value: "start_over" },
+        ]);
+      }
 
-    addMessage("I may not understand full sentences yet — try using the buttons!");
-  }
+      function handleQuickReply(value) {
+        switch (value) {
+          // Personas
+          case "persona_hiring":
+            addMessage("Hiring manager / recruiter", "user");
+            showHiringManagerMenu();
+            break;
+          case "persona_writer":
+            addMessage("Writer / doc person", "user");
+            showWriterMenu();
+            break;
+          case "persona_curious":
+            addMessage("Just curious", "user");
+            showCuriousMenu();
+            break;
 
-  toggle.addEventListener("click", () => {
-    chatbot.classList.add("tw-open");
-    initialGreeting();
-  });
+          // Hiring manager flows
+          case "hm_highlights":
+            addMessage("Experience highlights", "user");
+            addMessage(
+              "<strong>Experience highlights</strong><br>" +
+              "• Nearly four years as a Senior Technical Writer at Salesforce, focusing on API and online help documentation.<br>" +
+              "• Partnered closely with engineers and PMs across products.<br>" +
+              "• Built structured docs that support rapid product iteration."
+            );
+            break;
+          case "hm_api":
+            addMessage("API docs work", "user");
+            addMessage(
+              "<strong>API documentation</strong><br>" +
+              "• Designed topic structures for concepts, quickstarts, and reference.<br>" +
+              "• Wrote example-driven guides that reduce time to first successful API call.<br>" +
+              "• Collaborated on doc tooling and review workflows.<br><br>" +
+              "Example: <a href=\"/the-new-fundamentals-of-api-documentation-in-2025/\">" +
+              "The New Fundamentals of API Documentation in 2025</a>."
+            );
+            break;
+          case "hm_sample":
+            addMessage("Sample doc thinking", "user");
+            addMessage(
+              "<strong>How I’d approach documenting a new API</strong><br>" +
+              "1. Clarify core user journeys (first 15–30 minutes).<br>" +
+              "2. Draft a minimal quickstart with copy-paste examples that run.<br>" +
+              "3. Design reference that surfaces parameters, responses, and realistic errors.<br>" +
+              "4. Align naming, errors, and examples with engineering and PM."
+            );
+            break;
+          case "hm_contact":
+            addMessage("Contact info", "user");
+            addMessage(
+              "<strong>Contact</strong><br>" +
+              "You can reach me at <em>[poema.valente@gmail.com]</em> or on " +
+              "<a href=\"[https://www.linkedin.com/in/poema-quesado-valente-meyer-phd-395098b0/]\" target=\"_blank\">LinkedIn</a>.<br>" +
+              "I’m especially interested in roles where I can shape API docs and doc strategy."
+            );
+            break;
 
-  closeBtn.addEventListener("click", () => {
-    chatbot.classList.remove("tw-open");
-  });
+          // Writer flows
+          case "w_posts":
+            addMessage("Recommended posts", "user");
+            addMessage(
+              "<strong>Good starting posts</strong><br>" +
+              "<a href=\"/the-new-fundamentals-of-api-documentation-in-2025/\">" +
+              "The New Fundamentals of API Documentation in 2025</a>."
+            );
+            break;
+          case "w_philosophy":
+            addMessage("Docs philosophy", "user");
+            addMessage(
+              "<strong>Docs philosophy (short version)</strong><br>" +
+              "• Write for real tasks, not systems.<br>" +
+              "• Examples first, then explanation, then reference.<br>" +
+              "• Docs are a product surface: they deserve design, iteration, and metrics."
+            );
+            break;
+          case "w_sample":
+            addMessage("Sample rewrite", "user");
+            addMessage(
+              "<strong>Sample rewrite</strong><br>" +
+              "<em>Before:</em> “Our powerful API lets you easily integrate your data.”<br><br>" +
+              "<em>After:</em> “Use the API to create, update, and delete customer records. " +
+              "Start by creating an API key, then call the <code>/customers</code> endpoint with a JSON payload. " +
+              "Most integrations take under 10 minutes to set up.”"
+            );
+            break;
 
-  form.addEventListener("submit", (e) => {
-    e.preventDefault();
-    const value = input.value;
-    input.value = "";
-    handleUserInput(value);
-  });
-})();
-</script>
+          // Curious flows
+          case "c_start":
+            addMessage("Where to start", "user");
+            addMessage(
+              "A good place to start is my article " +
+              "<a href=\"/the-new-fundamentals-of-api-documentation-in-2025/\">" +
+              "The New Fundamentals of API Documentation in 2025</a>."
+            );
+            break;
+          case "c_topics":
+            addMessage("What I write about", "user");
+            addMessage(
+              "I write about technical writing, API documentation, docs processes, and the inner life of working in tech."
+            );
+            break;
+
+          case "start_over":
+            initialGreeting();
+            break;
+
+          default:
+            addMessage("Try using the buttons above to explore.");
+        }
+      }
+
+      function handleUserInput(text) {
+        const trimmed = text.trim();
+        if (!trimmed) return;
+
+        addMessage(trimmed, "user");
+
+        const lower = trimmed.toLowerCase();
+
+        if (lower === "help") {
+          addMessage("You can type words like “experience”, “API”, or “contact”, or just use the buttons.");
+          return;
+        }
+
+        if (lower.includes("experience")) return handleQuickReply("hm_highlights");
+        if (lower.includes("api")) return handleQuickReply("hm_api");
+        if (lower.includes("contact") || lower.includes("email") || lower.includes("reach")) {
+          return handleQuickReply("hm_contact");
+        }
+
+        addMessage("I may not understand full sentences yet, but the quick buttons will guide you.");
+      }
+
+      form.addEventListener("submit", (e) => {
+        e.preventDefault();
+        const value = input.value;
+        input.value = "";
+        handleUserInput(value);
+      });
+
+      // Initialize conversation when page loads
+      initialGreeting();
+    })();
+  </script>
 </body>
 </html>
